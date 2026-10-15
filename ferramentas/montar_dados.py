@@ -7,7 +7,7 @@ Só os TÍTULOS das etapas dos fluxos são usados: as observações técnicas fi
 """
 import json, os, sys, re
 sys.path.insert(0, os.path.dirname(__file__))
-from conteudo import ETAPAS, GRUPOS, NORMAS, FRENTES, CENAS, RESPOSTAS, FLUXOS_INLINE
+from conteudo import ETAPAS, GRUPOS, NORMAS, FRENTES, CENAS, RESPOSTAS, FLUXOS_INLINE, PONTES, FIOS
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 RAIZ = os.path.dirname(AQUI)
@@ -55,13 +55,14 @@ for e in ETAPAS:
         total_fluxos += 1
     for k, item in enumerate(e['fluxos']):
         if len(item) > 3: x['fluxos'][k]['grupo'] = item[3]
+    x['ponte'] = PONTES.get(e['id'], '')
     etapas.append(x)
 
 # Na página, só o texto de RESPOSTAS. A origem (já tem / requisito) fica só no documento interno.
 normas = [{'id': n[0], 'g': n[1], 'tema': n[2], 'norma': n[3], 'resposta': RESPOSTAS[n[0]]} for n in NORMAS]
 totais = {'modulos': 9, 'fluxos': total_fluxos, 'temas': len(normas), 'grupos': len(GRUPOS)}
 cenas = [{'a': c[0], 'b': c[1], 'apoio': c[2], 'modulos': c[3]} for c in CENAS]
-dados = {'etapas': etapas, 'grupos': GRUPOS, 'normas': normas, 'cenas': cenas, 'totais': totais}
+dados = {'etapas': etapas, 'grupos': GRUPOS, 'fios': FIOS, 'normas': normas, 'cenas': cenas, 'totais': totais}
 
 # Documento interno (não vai para o site): o que confirmar com o desenvolvimento da versão nova.
 if len(sys.argv) > 2:
