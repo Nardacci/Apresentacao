@@ -15,7 +15,7 @@ A fonte (Inter e Manrope) vem do Google Fonts; sem internet o texto usa a fonte 
 ## As páginas
 
 1. **Início** (`index.html`): promessa, o trilho do lote e três portas para as outras páginas.
-2. **Como funciona** (`funciona.html`): sete etapas, nove módulos e 35 fluxos de processo, que podem ser ampliados em tela cheia. O botão "Seguir o lote" percorre as etapas.
+2. **Como funciona** (`funciona.html`): sete etapas, nove módulos e 37 fluxos de processo, que podem ser ampliados em tela cheia. O botão "Seguir o lote" percorre as etapas.
 3. **Normas da ANVISA** (`anvisa.html`): 35 exigências da RDC 658/2022 e do Guia 33/2020, com filtro por grupo e a resposta do iLabPharma a cada uma.
 4. **O que entregamos** (`entrega.html`): sete cenas sobre o que o cliente ganha, além do sistema.
 

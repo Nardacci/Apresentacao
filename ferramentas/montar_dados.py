@@ -7,7 +7,7 @@ Só os TÍTULOS das etapas dos fluxos são usados: as observações técnicas fi
 """
 import json, os, sys, re
 sys.path.insert(0, os.path.dirname(__file__))
-from conteudo import ETAPAS, GRUPOS, NORMAS, FRENTES, CENAS, RESPOSTAS
+from conteudo import ETAPAS, GRUPOS, NORMAS, FRENTES, CENAS, RESPOSTAS, FLUXOS_INLINE
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 RAIZ = os.path.dirname(AQUI)
@@ -33,6 +33,10 @@ def fluxo_homol(chave, nome, linha):
         fases.append({'nome': limpa(f['nome']), 'etapas': [{'t': limpa(e['titulo']), 'dec': bool(e.get('decisao'))} for e in f['etapas']]})
     return {'nome': nome, 'linha': linha, 'fases': fases}
 
+def fluxo_inline(chave, nome, linha):
+    fases = [{'nome': n, 'etapas': [{'t': e, 'dec': False} for e in et]} for n, et in FLUXOS_INLINE[chave[1:]]]
+    return {'nome': nome, 'linha': linha, 'fases': fases, 'paralelo': chave == '!principal-modulos'}
+
 def fluxo_equipe(chave, nome, linha):
     k = chave[1:]
     passos = {s['n']: s for s in EQUIPE[k]['steps']}
@@ -45,7 +49,7 @@ for e in ETAPAS:
     x = {k: v for k, v in e.items() if k != 'fluxos'}
     x['fluxos'] = []
     for chave, nome, linha in e['fluxos']:
-        x['fluxos'].append(fluxo_equipe(chave, nome, linha) if chave.startswith('@') else fluxo_homol(chave, nome, linha))
+        x['fluxos'].append(fluxo_equipe(chave, nome, linha) if chave.startswith('@') else fluxo_inline(chave, nome, linha) if chave.startswith('!') else fluxo_homol(chave, nome, linha))
         total_fluxos += 1
     etapas.append(x)
 

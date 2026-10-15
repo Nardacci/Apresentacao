@@ -27,8 +27,11 @@ ETAPAS = [
         ],
         "resultado": "A indústria estruturada no iLabPharma: pessoas, acessos e cadastros que sustentam todos os outros módulos.",
         "conecta": ["Todos os módulos usam os cadastros do Principal"],
-        "fluxos": [],
-        "imagem": ("fluxo-modulo-principal.html", "Ver o fluxograma do módulo Principal"),
+        "fluxos": [
+            ("!principal-cadastros", "Cadastro, validação e disponibilização", "Dos cadastros e parâmetros aos dados mestres disponíveis para todos os módulos."),
+            ("!principal-modulos", "Como os módulos usam os cadastros", "O que cada módulo busca no Principal."),
+        ],
+        "imagem": ("fluxo-modulo-principal.html", "Ver o fluxograma ilustrado do módulo Principal"),
     },
     {
         "id": "materiais", "num": "02", "nome": "Materiais e armazenagem", "modulos": ["Estoque"],
@@ -379,4 +382,34 @@ RESPOSTAS = {
     35: ["O lote é escolhido na venda e a remessa guarda o endereço", "Eventos de cada embalagem com o destinatário", "Por lote, os clientes e as embalagens, prontos para um recolhimento"],
     36: ["IUM para cada embalagem, com linha do tempo de eventos", "Agregação em caixas e etiqueta", "Declaração ao SNCM com protocolo", "Número de série único"],
     37: ["Etiqueta do IUM", "Dados da empresa titular configuráveis na etiqueta"],
+}
+
+
+# Fluxos desenhados à mão, a partir do fluxograma ilustrado do módulo Principal (documento da equipe).
+# Formato: lista de fases; cada fase tem nome e etapas (título, decisão?).
+FLUXOS_INLINE = {
+    "principal-cadastros": [
+        ("Cadastro e parametrização", [
+            "Organização e empresas: pessoa jurídica, estrutura organizacional, centro de custo, conta contábil e gerencial",
+            "Usuários e perfis: profissional, conta de usuário, perfil e grupo de usuários, funções profissionais",
+            "Estrutura física e recursos: ambientes, equipamentos, instrumentos, pontos de água e utilidades",
+            "Tabelas e parâmetros: grau de contaminação, configurações e notificações do sistema",
+        ]),
+        ("Validação e controle", [
+            "Regras de negócio",
+            "Permissões e perfis",
+            "Trilha de auditoria (audit trail)",
+        ]),
+        ("Dados mestres", [
+            "Dados disponíveis para os módulos dependentes",
+        ]),
+    ],
+    "principal-modulos": [
+        ("Produção", ["Ambientes, equipamentos e instrumentos", "OPE", "Usuários e centros de custo"]),
+        ("Estoque", ["Locais físicos", "Fornecedores e pessoas jurídicas", "Itens e centros de custo"]),
+        ("Controle da Qualidade", ["Ambientes e instrumentos", "Profissionais e setores", "Usuários"]),
+        ("Garantia da Qualidade", ["Profissionais e estrutura organizacional", "Documentos", "Treinamentos"]),
+        ("Controle de Documentos", ["Estrutura organizacional e perfis", "Aprovadores", "Vigência"]),
+        ("Rastreabilidade", ["Lotes, produtos e insumos", "Movimentações e eventos"]),
+    ],
 }
