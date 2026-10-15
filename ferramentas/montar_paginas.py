@@ -32,6 +32,7 @@ def pagina(chave, titulo, descricao, corpo, extra_body=''):
 %(corpo)s
 </main>
 %(extra)s
+<nav class="seq" id="seq" aria-label="Roteiro da apresentação"></nav>
 <script src="dados/dados.js"></script>
 <script src="pitch.js"></script>
 </body>
@@ -48,7 +49,15 @@ INICIO = '''<section class="hero" id="inicio">
     <p class="kicker"><span class="ponto"></span>iLabPharma</p>
     <h1>Do insumo ao lote liberado, <em>tudo conectado.</em></h1>
     <p class="lead">O iLabPharma acompanha a produção de medicamentos e vacinas de ponta a ponta, com a Qualidade dentro de cada etapa e as exigências da ANVISA como guia.</p>
-    <nav class="portas" id="portas" aria-label="Conheça o iLabPharma"></nav>
+    <div class="inicio-acao">
+      <a class="btn primario grande" id="comecar" href="funciona.html#industria">Iniciar a apresentação <span aria-hidden="true">→</span></a>
+      <p class="atalho">Use as setas <kbd>←</kbd> <kbd>→</kbd> do teclado para avançar.</p>
+    </div>
+    <ol class="roteiro" aria-label="O que você vai ver">
+      <li><b>1</b> Como o iLabPharma funciona</li>
+      <li><b>2</b> Dentro das normas da ANVISA</li>
+      <li><b>3</b> O que entregamos</li>
+    </ol>
   </div>
   <div class="hero-trilho" aria-label="A jornada do lote">
     <p class="trilho-rotulo">Siga o lote</p>
@@ -62,28 +71,26 @@ FUNCIONA = '''<section class="pagina" id="funciona">
   <div class="pagina-topo">
     <p class="kicker"><span class="ponto"></span>Como funciona</p>
     <h1>Entenda como o iLabPharma funciona</h1>
-    <p class="sub">Sete etapas, nove módulos integrados. Escolha uma etapa ou deixe o lote percorrer o caminho.</p>
-    <button class="btn" id="tocar" type="button" aria-pressed="false"><span id="tocarIco" aria-hidden="true">▶</span> <span id="tocarTxt">Seguir o lote</span></button>
   </div>
   <div class="funciona">
     <ol class="passos" id="passos" aria-label="Etapas"></ol>
     <article class="painel" id="painel" aria-live="polite"></article>
   </div>
 </section>
-''' + RODAPE
+'''
 
 ANVISA = '''<section class="pagina" id="anvisa">
   <div class="pagina-topo">
     <p class="kicker"><span class="ponto"></span>As normas</p>
     <h1>Dentro das normas da ANVISA</h1>
-    <p class="sub">Para cada exigência da RDC 658/2022 e do Guia 33/2020, como o iLabPharma responde.</p>
+    <p class="sub" id="anvisaSub">Para cada exigência da RDC 658/2022 e do Guia 33/2020, como o iLabPharma responde.</p>
   </div>
   <div class="cobertura" id="cobertura"></div>
-  <div class="filtros" id="filtros"></div>
+  <div class="filtros" id="filtros" role="tablist" aria-label="Grupos da norma"></div>
   <div class="grade-normas" id="normas"></div>
   <p class="nota">Fonte: RDC 658/2022 e Guia 33/2020 (ANVISA).</p>
 </section>
-''' + RODAPE
+'''
 
 ENTREGA = '''<div class="cenas" id="cenas" aria-label="O que entregamos"></div>
 <nav class="pontos" id="pontos" aria-label="Cenas"></nav>

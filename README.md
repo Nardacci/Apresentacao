@@ -12,12 +12,16 @@ python3 -m http.server 8000
 
 A fonte (Inter e Manrope) vem do Google Fonts; sem internet o texto usa a fonte padrão.
 
-## As páginas
+## A apresentação: um roteiro, do início ao fim
 
-1. **Início** (`index.html`): promessa, o trilho do lote e três portas para as outras páginas.
-2. **Como funciona** (`funciona.html`): sete etapas, nove módulos e 37 fluxos de processo, que podem ser ampliados em tela cheia. O botão "Seguir o lote" percorre as etapas.
-3. **Normas da ANVISA** (`anvisa.html`): 35 exigências da RDC 658/2022 e do Guia 33/2020, com filtro por grupo e a resposta do iLabPharma a cada uma.
-4. **O que entregamos** (`entrega.html`): sete cenas sobre o que o cliente ganha, além do sistema.
+O presenter só avança: botão **Próximo** (ou seta →) em todas as telas; **Anterior** (ou seta ←) volta uma tela. A barra fixa mostra o capítulo, o progresso e o nome da próxima tela.
+
+| Capítulo | Telas | Arquivo |
+|---|---|---|
+| Início | 1 | `index.html`: promessa, trilho do lote e o botão "Iniciar a apresentação" |
+| Como funciona | 14 (7 etapas × visão geral e fluxos) | `funciona.html`: 37 fluxos de processo; o primeiro de cada etapa já vem aberto; botão "Ampliar o fluxo" |
+| Normas da ANVISA | 7 (um grupo por tela) | `anvisa.html`: 35 exigências da RDC 658/2022 e do Guia 33/2020 e a resposta do iLabPharma |
+| O que entregamos | 7 cenas | `entrega.html`: o que o cliente ganha, além do sistema |
 
 ## Estrutura
 
