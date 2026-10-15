@@ -1,39 +1,34 @@
-# iLabPharma · Apresentação (Process Experience)
+# iLabPharma · Apresentação
 
-Apresentação interativa do iLabPharma para clientes: uma jornada de oito etapas, do cadastro da indústria até o produto acabado, com fluxogramas dos processos.
-
-Origem: copiada em 15/10/2026 do repositório `Nardacci/iLabPharma` (a antiga página inicial, hoje `apresentacao.html` lá). Esta cópia é independente: mudanças aqui não alteram o portal de homologação.
+Pitch de vendas do iLabPharma, em uma página: **como o sistema funciona**, **aderência às normas da ANVISA** e **o que será entregue**.
 
 ## Como abrir
 
-Site estático, sem build. Abra `index.html` no navegador, ou sirva a pasta:
+Site estático, sem build. Abra `index.html` no navegador (funciona também por duplo clique) ou sirva a pasta:
 
 ```
 python3 -m http.server 8000
 ```
 
-e acesse `http://localhost:8000`. A fonte (Inter e Manrope) vem do Google Fonts; sem internet o texto usa a fonte padrão.
+A fonte (Inter e Manrope) vem do Google Fonts; sem internet o texto usa a fonte padrão.
 
-## Navegação
+## A página
 
-1. **Início:** abertura com o botão "Iniciar jornada".
-2. **Jornada:** passa por "Seguir" e "Continuar". Etapas: Indústria, Fábrica, Preparação, Medicamento, Produção, Controle da Qualidade, Garantia da Qualidade, Produto Acabado.
-3. **Fluxos:** cada etapa tem um item "Fluxo" que abre o fluxograma em tela cheia (`fluxo-*.html`), com zoom pela roda do mouse, duplo clique, `+` / `-` e `0` para voltar.
-4. **Menu lateral** (visão de processos): Mapa de Processos, Processos, Módulos, Glossário e Sobre o Projeto.
+1. **Início:** promessa, três números e o trilho do lote, que percorre as sete etapas sozinho.
+2. **Como funciona:** sete etapas (Indústria, Materiais e armazenagem, Medicamento e fabricação, Controle da Qualidade, Garantia da Qualidade, Documentos, Produto acabado até o cliente), com o que o sistema faz, o resultado, as ligações com outros módulos e **35 fluxos de processo** desenhados na própria página. O botão "Seguir o lote" percorre as etapas.
+3. **Normas da ANVISA:** 35 pontos da RDC 658/2022 e do Guia 33/2020, com filtro por grupo e por situação. Cada ponto mostra o que o iLabPharma já oferece e a próxima entrega.
+4. **Evolução:** nove frentes de entrega, ligadas aos pontos da norma que fecham.
 
 ## Estrutura
 
 | Caminho | Conteúdo |
 |---|---|
-| `index.html` | Página única da apresentação |
-| `app.js`, `home.js`, `journey*.js` | Lógica e conteúdo das telas e da jornada (os arquivos `-v4`, `-fix` e `stage*` são camadas sobrepostas, carregadas na ordem do `index.html`) |
-| `styles.css`, `home.css`, `journey*.css` | Estilos |
-| `fluxo-*.html` | Visualizador de cada fluxograma (zoom e arraste) |
-| `assets/` | Logo e ilustrações SVG |
-| `imagens/` | Fluxogramas e telas do sistema em PNG |
+| `index.html`, `pitch.css`, `pitch.js` | A página (sem conteúdo próprio) |
+| `dados/dados.js` | Conteúdo, gerado |
+| `ferramentas/conteudo.py` | O texto de venda: editar aqui |
+| `ferramentas/montar_dados.py` | Gera `dados/dados.js` a partir do texto e dos fluxos da homologação |
+| `ferramentas/equipe-fluxos.json` | Fluxos de Recebimento e Quarentena (documentos da equipe) |
+| `jornada-anterior.html` e arquivos `journey-*`, `home.*`, `app.js`, `styles.css`, `fluxo-*.html` | Apresentação anterior (copiada do iLabPharma), só como referência |
+| `assets/`, `imagens/` | Logos, ilustrações e fluxogramas |
 
-## Pendências conhecidas (levantadas na cópia)
-
-- O logo SVG tem a palavra "Pharm" em cor escura e some no fundo escuro da abertura e do cabeçalho.
-- As imagens `imagens/Sistema - *.png` não são usadas por nenhuma tela.
-- O código foi sobreposto em camadas (vários `journey-*` que corrigem os anteriores); vale consolidar antes de crescer o conteúdo.
+Regras de trabalho e decisões do responsável: `CLAUDE.md`.
