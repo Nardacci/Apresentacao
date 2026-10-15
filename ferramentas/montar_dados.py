@@ -48,9 +48,13 @@ total_fluxos = 0
 for e in ETAPAS:
     x = {k: v for k, v in e.items() if k != 'fluxos'}
     x['fluxos'] = []
-    for chave, nome, linha in e['fluxos']:
+    for item in e['fluxos']:
+        chave, nome, linha = item[:3]
+        grupo = item[3] if len(item) > 3 else ''
         x['fluxos'].append(fluxo_equipe(chave, nome, linha) if chave.startswith('@') else fluxo_inline(chave, nome, linha) if chave.startswith('!') else fluxo_homol(chave, nome, linha))
         total_fluxos += 1
+    for k, item in enumerate(e['fluxos']):
+        if len(item) > 3: x['fluxos'][k]['grupo'] = item[3]
     etapas.append(x)
 
 # Na página, só o texto de RESPOSTAS. A origem (já tem / requisito) fica só no documento interno.
