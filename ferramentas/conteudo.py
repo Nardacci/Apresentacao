@@ -154,7 +154,7 @@ ETAPAS = [
         "fluxos": [
             ("6.controle_documento/ciclo-documento", "Ciclo do documento", "Da inclusão à vigência, com revisão, substituição e obsolescência."),
             ("6.controle_documento/controle-copias", "Controle de cópias", "Distribuição de cópias impressas de documentos aprovados."),
-            ("6.controle_documento/externo-legado", "Documento externo e legado", "Normas, documentos de clientes e fornecedores e documentos anteriores ao sistema."),
+            ("6.controle_documento/externo-legado", "Documento externo e anterior ao sistema", "Normas, documentos de clientes e fornecedores e documentos anteriores ao sistema."),
             ("6.controle_documento/tipo-arquivos-modelos", "Tipo de documento, arquivos e modelos", "O cadastro que define o caminho de cada tipo de documento."),
         ],
     },

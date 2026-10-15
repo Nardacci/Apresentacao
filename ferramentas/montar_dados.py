@@ -20,12 +20,17 @@ FASES_EQUIPE = {
     'quarentena': [('Parametrização e entrada', [1, 2]), ('Solicitação e amostragem', [3, 4, 5]), ('Análise', [6, 7]), ('Laudo e movimentação', [8, 9])],
 }
 
+def limpa(txt):
+    # "legado" aqui é o recurso do Controle de Documentos (documento anterior ao sistema);
+    # troca na exibição para não confundir com o sistema legado.
+    return (txt.replace('documento legado', 'documento anterior ao sistema').replace('Legado', 'Anteriores ao sistema').replace('legado', 'anterior ao sistema'))
+
 def fluxo_homol(chave, nome, linha):
     pasta, arq = chave.split('/')
     d = json.load(open(os.path.join(HOMOL, pasta, 'fluxos', arq + '.fluxo.json'), encoding='utf-8'))
     fases = []
     for f in d['fases']:
-        fases.append({'nome': f['nome'], 'etapas': [{'t': e['titulo'], 'dec': bool(e.get('decisao'))} for e in f['etapas']]})
+        fases.append({'nome': limpa(f['nome']), 'etapas': [{'t': limpa(e['titulo']), 'dec': bool(e.get('decisao'))} for e in f['etapas']]})
     return {'nome': nome, 'linha': linha, 'fases': fases}
 
 def fluxo_equipe(chave, nome, linha):

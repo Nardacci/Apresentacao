@@ -1823,7 +1823,7 @@ window.DADOS={
      ]
     },
     {
-     "nome": "Documento externo e legado",
+     "nome": "Documento externo e anterior ao sistema",
      "linha": "Normas, documentos de clientes e fornecedores e documentos anteriores ao sistema.",
      "fases": [
       {
@@ -1844,10 +1844,10 @@ window.DADOS={
        ]
       },
       {
-       "nome": "Legado",
+       "nome": "Anteriores ao sistema",
        "etapas": [
         {
-         "t": "Incluir documento legado",
+         "t": "Incluir documento anterior ao sistema",
          "dec": false
         },
         {
