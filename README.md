@@ -14,14 +14,16 @@ A fonte (Inter e Manrope) vem do Google Fonts; sem internet o texto usa a fonte 
 
 ## A apresentação: um roteiro, do início ao fim
 
+Tudo roda em **um só documento** (`index.html`): as telas se alternam sem recarregar, e a **tela cheia** (botão no topo ou tecla **F**) se mantém ao avançar. Os arquivos `funciona.html`, `anvisa.html` e `entrega.html` apenas redirecionam para os endereços `#...` correspondentes.
+
 O presenter só avança: botão **Próximo** (ou seta →) em todas as telas; **Anterior** (ou seta ←) volta uma tela. A barra fixa mostra o capítulo, o progresso e o nome da próxima tela.
 
 | Capítulo | Telas | Arquivo |
 |---|---|---|
-| Início | 1 | `index.html`: promessa, trilho do lote e o botão "Iniciar a apresentação" |
-| Como funciona | 14 (7 etapas × visão geral e fluxos) | `funciona.html`: 37 fluxos de processo; o primeiro de cada etapa já vem aberto; botão "Ampliar o fluxo" |
-| Normas da ANVISA | 7 (um grupo por tela) | `anvisa.html`: 35 exigências da RDC 658/2022 e do Guia 33/2020 e a resposta do iLabPharma |
-| O que entregamos | 7 cenas | `entrega.html`: o que o cliente ganha, além do sistema |
+| Início | 1 | promessa, trilho do lote e o botão "Iniciar a apresentação" |
+| Como funciona | 14 (7 etapas × visão geral e fluxos) | 37 fluxos de processo; o primeiro de cada etapa já vem aberto; botão "Ampliar o fluxo" |
+| Normas da ANVISA | 7 (um grupo por tela) | 35 exigências da RDC 658/2022 e do Guia 33/2020 e a resposta do iLabPharma |
+| O que entregamos | 7 cenas | o que o cliente ganha, além do sistema |
 
 ## Estrutura
 

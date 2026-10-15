@@ -19,13 +19,14 @@
 
 **15/10/2026, terceira rodada**
 8. **A apresentação é um roteiro em linha reta, do início ao fim, sem idas e vindas**: Início, Como funciona (cada etapa em duas telas: visão e fluxos, com o primeiro fluxo já aberto), Normas da ANVISA (uma tela por grupo) e O que entregamos (cenas). Barra fixa em todas as telas com Anterior e Próximo (mostrando o nome da próxima tela) e setas do teclado. Poucos cliques; o presenter só avança.
-9. **Contatos** do fecho (Sidnei e Alex Arruda) estão guardados em `homologacao/apresentacao/contatos.md` do repositório privado. **Não publicar** até o responsável mandar. O código já aceita `D.contatos` (nome, e-mail, celular) na última cena.
+9. **Um só documento** (`index.html`): as quatro telas se alternam sem recarregar a página, para a **tela cheia** (botão e tecla F) não ser perdida ao avançar. `funciona.html`, `anvisa.html` e `entrega.html` são só redirecionadores para os endereços antigos. Rotas por `#`: `#industria`, `#industria-fluxos`, `#g0` a `#g6`, `#entrega`. O botão Voltar do navegador volta uma tela. Pontes ("Na sequência" e frase-guia por grupo) ligam as telas.
+10. **Contatos** do fecho (Sidnei e Alex Arruda) estão guardados em `homologacao/apresentacao/contatos.md` do repositório privado. **Não publicar** até o responsável mandar. O código já aceita `D.contatos` (nome, e-mail, celular) na última cena.
 
 **Atenção:** a versão nova **não foi analisada** aqui. Os itens que vieram de requisito (e não do que o legado já faz) estão no documento interno `homologacao/apresentacao/itens-a-confirmar.md` do repositório privado `LabMedsys_homol`. **Confirmar com o desenvolvimento antes de mostrar a clientes.** Esse documento não vai para o site.
 
 ## Como o conteúdo é montado
 - `ferramentas/conteudo.py`: o texto de venda (sete etapas, 35 temas da norma com `RESPOSTAS` para a página, cenas de "O que entregamos"). Editar aqui. `NORMAS` guarda a origem de cada item (já existe / requisito), só para o documento interno.
-- `ferramentas/montar_paginas.py`: gera as quatro páginas HTML.
+- `ferramentas/montar_paginas.py`: gera o `index.html` (documento único) e os três redirecionadores.
 - `ferramentas/montar_dados.py`: lê o texto e os fluxos da homologação (`labmedsys_homol/homologacao/*/fluxos/*.fluxo.json`, só os títulos das etapas) e gera `dados/dados.js`. Os fluxos de Recebimento e Quarentena vêm de `ferramentas/equipe-fluxos.json` (documentos da equipe).
 - `pitch.css` e `pitch.js` desenham as páginas; não têm conteúdo próprio.
 - Depois de mudar `conteudo.py`: `python3 ferramentas/montar_dados.py <pasta homologacao> [arquivo do documento interno]` e, se mudar o cabeçalho, `python3 ferramentas/montar_paginas.py`.

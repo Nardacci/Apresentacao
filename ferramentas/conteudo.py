@@ -68,7 +68,7 @@ ETAPAS = [
     {
         "id": "fabricacao", "num": "03", "nome": "Medicamento e fabricação", "modulos": ["Produção", "OPE"],
         "pergunta": "Como o medicamento é definido e fabricado?",
-        "titulo": "Agora o medicamento deixa de ser uma especificação e passa a existir fisicamente.",
+        "titulo": "O medicamento deixa de ser especificação e passa a existir.",
         "texto": "A Produção define o que se fabrica, prepara a área, obtém as autorizações, gera o lote e registra cada etapa. O OPE monta o modelo do registro eletrônico de lote.",
         "faz": [
             "Cadastro de insumos, produto, fórmula e lote padrão",
