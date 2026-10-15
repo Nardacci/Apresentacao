@@ -3,9 +3,11 @@
 (Nardacci/LabMedsys_homol, pasta homologacao/): fluxos documentados, diagnóstico de
 conformidade com a RDC 658/2022 e o Guia 33/2020, e o mapa do processo fabril.
 
-Regras (CLAUDE.md): foco no legado; nenhuma falha, defeito ou limitação descrita;
-nada de segurança (acesso, senha); nada inventado. Cada item "ja" é uma função que
-existe; cada item "entrega" é o que será entregue (decisão do responsável, 15/10/2026).
+Regras (CLAUDE.md): o que se vende é a versão nova; o legado é só referência e nunca aparece.
+Nenhuma falha, defeito ou limitação descrita; nada de segurança (acesso, senha); nada inventado.
+Em NORMAS, "ja" = função que o legado já tem; "entrega" = requisito levantado na análise, a
+confirmar com o desenvolvimento da versão nova. Na página, as duas listas viram uma só
+("Como o iLabPharma responde"); a origem de cada item fica só no documento interno de conferência.
 """
 
 # Ordem da jornada. Cada fluxo: (arquivo .fluxo.json ou chave da equipe, nome, uma linha)
@@ -21,7 +23,7 @@ ETAPAS = [
             "Estrutura organizacional e locais da empresa",
             "Pessoas jurídicas: fornecedores, clientes e fabricantes",
             "Tabelas de apoio usadas por todos os módulos",
-            "Histórico das alterações, campo a campo, na maior parte dos cadastros",
+            "Histórico das alterações, campo a campo",
         ],
         "resultado": "A indústria estruturada no iLabPharma: pessoas, acessos e cadastros que sustentam todos os outros módulos.",
         "conecta": ["Todos os módulos usam os cadastros do Principal"],
@@ -313,3 +315,68 @@ FRENTES = [
     ("Laboratório reforçado", "Conferência por outra pessoa, investigação de resultado fora de especificação, métodos e padrões controlados.", [24, 25]),
     ("Etapas da norma obrigatórias", "Inspeção da entrega, CAPA para desvio crítico, parecer das áreas na mudança, verificação de eficácia e revisão periódica dos documentos.", [9, 15, 16, 33]),
 ]
+
+
+# Página "O que entregamos": cenas de experiência (sem números, sem lista de funções).
+# Cada cena tem uma frase de efeito, uma linha de apoio e os módulos que a sustentam.
+CENAS = [
+    ("Não entregamos um sistema.", "Entregamos a <em>certeza</em> de cada lote.",
+     "Do insumo recebido ao medicamento liberado, cada lote chega ao fim com a sua história inteira.",
+     ["Estoque", "Produção", "Controle da Qualidade"]),
+    ("Entregamos a <em>tranquilidade</em>", "de abrir a porta para a inspeção.",
+     "Registros, histórico e documentos no lugar, porque foram feitos no momento em que as coisas aconteceram.",
+     ["Garantia da Qualidade", "Controle de Documentos"]),
+    ("Entregamos <em>uma só verdade</em>.", "Nove módulos, uma única língua.",
+     "O que o laboratório decide, o estoque, a produção e a venda respeitam. Cada informação é registrada uma vez e usada por todos.",
+     ["Principal", "Estoque", "Produção", "Comercial"]),
+    ("Entregamos a <em>qualidade dentro de cada etapa</em>,", "não conferida só no final.",
+     "Desvios, mudanças, treinamentos e auditorias acontecem junto com a operação, e não depois dela.",
+     ["Garantia da Qualidade", "Controle da Qualidade"]),
+    ("Entregamos a <em>confiança</em> de saber", "para onde foi cada lote.",
+     "Cada embalagem com o seu identificador único e cada remessa registrada. Se um dia for preciso recolher, a resposta já existe.",
+     ["Rastreabilidade", "Comercial", "Estoque"]),
+    ("Entregamos <em>orgulho</em>:", "o de fabricar bem o que vai cuidar de pessoas.",
+     "Medicamentos e vacinas feitos com processo, prova e a norma da ANVISA como guia.",
+     ["Todos os módulos"]),
+]
+
+# Texto exibido na página "Dentro das normas da ANVISA": a resposta do iLabPharma a cada exigência.
+# Escrito como capacidade do produto, sem ressalvas. O que veio de requisito (NORMAS[..][6]) está
+# listado no documento interno de conferência com o desenvolvimento da versão nova.
+RESPOSTAS = {
+    3: ["Histórico campo a campo: quem alterou, quando e o valor anterior", "Motivo obrigatório em toda inclusão, alteração e exclusão, com data e hora do servidor", "Formato único de histórico em todos os módulos"],
+    4: ["Registro de quem cadastrou e de quem autorizou cada operação", "Confirmação no momento da ação", "Envio à ANVISA registrado somente com o protocolo recebido"],
+    5: ["Assinatura eletrônica em laudos, aprovações de documentos, mudanças e liberação de lote", "Aprovação somente pela função designada", "Separação de funções: quem cadastra não autoriza o mesmo recebimento"],
+    6: ["Documentação de validação por módulo, conforme o Guia 33 e o GAMP 5: regras de negócio, requisitos, análise de risco, plano de testes e matriz de rastreabilidade"],
+    38: ["Módulos que trocam informação sem redigitação: o laudo do CQ chega ao Estoque, a reserva do Comercial acontece no Estoque, a remessa gera elo com a Rastreabilidade", "Retorno confirmado em cada integração: se a informação não chegar, o usuário é avisado e a operação não segue"],
+    8: ["Avaliação do fornecedor a cada entrega", "Pedido de compra com baixa no recebimento", "Qualificação de fornecedor ligada ao recebimento: material de fornecedor não aprovado é sinalizado ou bloqueado"],
+    9: ["Portaria, inspeção do veículo, conferência de nota, de quantidade e pesagem", "Inspeção da entrega documentada", "Divergência de quantidade aceita somente com justificativa"],
+    10: ["O lote entra em quarentena, abre a análise no Controle da Qualidade e só sai pelo laudo", "Lote reprovado bloqueado", "Situação única do lote, atualizada no instante do laudo e respeitada por todos os módulos"],
+    11: ["Validade obrigatória para item com controle de validade", "Agenda de reanálise e revalidação periódica do lote", "Lote vencido ou com reanálise vencida não é usado", "Separação pela validade mais próxima"],
+    12: ["Número de lote único: lote repetido é recusado", "Número preservado exatamente como o fabricante o emitiu"],
+    13: ["Amostras de referência, retenção e estabilidade guardadas em almoxarifado especial do CQ", "Prazo mínimo de guarda, com bloqueio da saída antes do prazo"],
+    14: ["Laudo final do Controle da Qualidade e liberação da produção, cada um com sua etapa", "Certificação do lote pela Pessoa Delegada, com função conferida e assinatura eletrônica", "Venda, IUM e expedição somente de lote certificado"],
+    15: ["Fluxo completo: registro, ação imediata, pré-avaliação, avaliação pelas áreas, CAPA corretiva e preventiva, monitoramento e encerramento", "Número sequencial e justificativa no cancelamento", "O desvio retém o lote até a decisão", "CAPA obrigatória para desvio crítico, com verificação de eficácia"],
+    16: ["Da solicitação à aprovação do produto, com avaliação pelas áreas, plano de ação e histórico", "Parecer das áreas obrigatório antes da liberação", "A mudança aprovada chega à Produção e aos documentos", "Verificação de eficácia"],
+    17: ["Cadastros, roteiros, programação, execução por departamento, avaliação e relatório final", "Independência do inspetor em relação à área auditada", "Desvio aberto para cada não conformidade encontrada"],
+    18: ["Matriz de treinamento, turmas, avaliação dos treinandos e acompanhamento de vigentes, pendentes e vencidos", "Aviso de vencimento", "Treinamento conferido antes de a pessoa executar a tarefa e de o documento valer", "Programa de treinamento aprovado"],
+    19: ["Controle da situação do registro, check-list, solicitação de registro e envio à ANVISA", "Avisos de prazo", "Produção somente de produto com registro válido"],
+    20: ["Reclamação registrada como origem de desvio", "Fluxo completo de reclamação e recolhimento, com a lista de clientes por lote", "Eventos de cada embalagem (IUM) para localizar o lote"],
+    21: ["Revisão periódica da qualidade do produto no módulo de Garantia da Qualidade"],
+    22: ["Programação, registro, revisão e liberação de limpeza, calibração, qualificação e manutenção de salas, equipamentos e instrumentos", "Resultado com limites numéricos e aviso de atraso", "Validação de processos na Garantia da Qualidade"],
+    23: ["Amostragem por regra cadastrada, com amostrador e verificador diferentes", "Quantidades para análise, retenção, referência e estabilidade, com checklist", "Registro do teste com todos os dados que a norma pede"],
+    24: ["Resultados conferidos contra os limites cadastrados", "Conferência dos cálculos por outra pessoa", "Investigação de resultado fora de especificação"],
+    25: ["Regras de análise cadastradas por item", "Controle de métodos validados, reagentes, padrões e meios de cultura"],
+    26: ["Regra com os tempos do estudo, abertura automática pelo Estoque, solicitação de cada tempo, interrupção ou final com relatório", "Avaliação do estudo e avisos de prazo"],
+    27: ["Fórmula padrão e ordem de produção por produto", "Aprovação com permissão própria: quem elaborou não aprova", "Versão e aprovação formal da fórmula e do modelo do registro de lote", "Somente a versão vigente chega à produção"],
+    28: ["Registro eletrônico com etapas, subetapas e campos obrigatórios por produto, com modelo montado no OPE", "Cobertura completa do que o artigo 137 pede"],
+    29: ["Pesagem com conferência", "Controles em processo e resultados ambientais registrados, com limites obrigatórios"],
+    30: ["Reconciliação ao final da produção, com liberação", "Faixa esperada de rendimento e investigação obrigatória", "Aprovação formal de desvio das instruções"],
+    31: ["Indicação da etapa terceirizada, fornecedor, anexos e confirmação ou cancelamento", "Contrato e qualificação do terceiro vinculados à etapa"],
+    32: ["Ciclo completo: elaboração, revisão, aprovação, vigência, nova revisão e obsolescência", "Identificação única de cada documento", "Assinatura eletrônica nas aprovações", "Vigência calculada em um só lugar"],
+    33: ["Controle de cópias impressas, com destinatário", "Revisão periódica obrigatória", "Cópia somente de documento vigente"],
+    34: ["Prazo de retenção de documentos e de registros de lote"],
+    35: ["O lote é escolhido na venda e a remessa guarda o endereço", "Eventos de cada embalagem com o destinatário", "Por lote, os clientes e as embalagens, prontos para um recolhimento"],
+    36: ["IUM para cada embalagem, com linha do tempo de eventos", "Agregação em caixas e etiqueta", "Declaração ao SNCM com protocolo", "Número de série único"],
+    37: ["Etiqueta do IUM", "Dados da empresa titular configuráveis na etiqueta"],
+}

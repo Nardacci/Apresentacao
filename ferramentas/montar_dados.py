@@ -7,7 +7,7 @@ Só os TÍTULOS das etapas dos fluxos são usados: as observações técnicas fi
 """
 import json, os, sys, re
 sys.path.insert(0, os.path.dirname(__file__))
-from conteudo import ETAPAS, GRUPOS, NORMAS, FRENTES
+from conteudo import ETAPAS, GRUPOS, NORMAS, FRENTES, CENAS, RESPOSTAS
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 RAIZ = os.path.dirname(AQUI)
@@ -44,16 +44,22 @@ for e in ETAPAS:
         total_fluxos += 1
     etapas.append(x)
 
-normas = [{'id': n[0], 'g': n[1], 'tema': n[2], 'norma': n[3], 'nivel': n[4], 'ja': n[5], 'entrega': n[6]} for n in NORMAS]
-frentes = [{'n': i + 1, 'titulo': t, 'texto': x, 'temas': tm} for i, (t, x, tm) in enumerate(FRENTES)]
-totais = {
-    'modulos': 9,
-    'fluxos': total_fluxos,
-    'temas': len(normas),
-    'base': sum(1 for n in normas if n['nivel'] == 'base'),
-    'entrega': sum(1 for n in normas if n['nivel'] == 'entrega'),
-}
-dados = {'etapas': etapas, 'grupos': GRUPOS, 'normas': normas, 'frentes': frentes, 'totais': totais}
+# Na página, só o texto de RESPOSTAS. A origem (já tem / requisito) fica só no documento interno.
+normas = [{'id': n[0], 'g': n[1], 'tema': n[2], 'norma': n[3], 'resposta': RESPOSTAS[n[0]]} for n in NORMAS]
+totais = {'modulos': 9, 'fluxos': total_fluxos, 'temas': len(normas), 'grupos': len(GRUPOS)}
+cenas = [{'a': c[0], 'b': c[1], 'apoio': c[2], 'modulos': c[3]} for c in CENAS]
+dados = {'etapas': etapas, 'grupos': GRUPOS, 'normas': normas, 'cenas': cenas, 'totais': totais}
+
+# Documento interno (não vai para o site): o que confirmar com o desenvolvimento da versão nova.
+if len(sys.argv) > 2:
+    linhas = ['# Itens a confirmar com o desenvolvimento da versão nova', '',
+              'Estes itens aparecem na página "Dentro das normas da ANVISA" como capacidade do iLabPharma. Vêm de requisitos levantados na análise do legado (não existem lá). Antes de mostrar a clientes, confirmar que a versão nova os atende.', '']
+    for n in NORMAS:
+        if n[6]:
+            linhas.append('## Tema %d · %s (%s)' % (n[0], n[2], n[3]))
+            linhas += ['- [ ] ' + x for x in n[6]] + ['']
+    open(sys.argv[2], 'w', encoding='utf-8').write('\n'.join(linhas))
+    print('Documento interno:', sys.argv[2])
 os.makedirs(os.path.join(RAIZ, 'dados'), exist_ok=True)
 saida = os.path.join(RAIZ, 'dados', 'dados.js')
 with open(saida, 'w', encoding='utf-8') as f:
