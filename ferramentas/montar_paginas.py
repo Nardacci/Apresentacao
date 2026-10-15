@@ -23,7 +23,7 @@ INICIO = '''<section class="hero" id="inicio">
     </ol>
   </div>
   <div class="hero-trilho" aria-label="A jornada do lote">
-    <p class="trilho-rotulo">Siga o lote</p>
+    <p class="trilho-rotulo">O caminho do lote, até o cliente e as normas</p>
     <ol class="trilho" id="trilho"></ol>
     <div class="trilho-card" id="trilhoCard" aria-live="polite"></div>
   </div>
