@@ -17,7 +17,7 @@ e acesse `http://localhost:8000`. A fonte (Inter e Manrope) vem do Google Fonts;
 ## Navegação
 
 1. **Início:** abertura com o botão "Iniciar jornada".
-2. **Jornada:** passa por "Seguir" e "Continuar". Etapas: Indústria, Fábrica, Medicamento, Produção, Controle da Qualidade, Garantia da Qualidade, Produto Acabado.
+2. **Jornada:** passa por "Seguir" e "Continuar". Etapas: Indústria, Fábrica, Preparação, Medicamento, Produção, Controle da Qualidade, Garantia da Qualidade, Produto Acabado.
 3. **Fluxos:** cada etapa tem um item "Fluxo" que abre o fluxograma em tela cheia (`fluxo-*.html`), com zoom pela roda do mouse, duplo clique, `+` / `-` e `0` para voltar.
 4. **Menu lateral** (visão de processos): Mapa de Processos, Processos, Módulos, Glossário e Sobre o Projeto.
 
