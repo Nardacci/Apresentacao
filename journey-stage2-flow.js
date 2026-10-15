@@ -75,7 +75,7 @@
 
         <main class="stage2-flow-main">
           <header class="stage2-flow-header">
-            <button class="stage2-flow-brand" type="button" onclick="renderHome()"><img src="assets/ilabpharma-logo.svg" alt="iLabPharma"></button>
+            <button class="stage2-flow-brand" type="button" onclick="renderHome()"><img src="assets/ilabpharma-logo-claro.svg" alt="iLabPharma"></button>
             <div class="stage2-flow-header-divider"></div>
             <div class="stage2-flow-header-title"><strong>Fluxos da Fábrica</strong><span>Processos representados para a etapa de Fábrica.</span></div>
             <div class="stage2-flow-header-actions"><button type="button" title="Início" onclick="renderHome()">⌂</button></div>

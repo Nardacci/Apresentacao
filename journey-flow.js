@@ -13,7 +13,7 @@ function renderStageFlow(stageIndex=journeyIndex){
   app.innerHTML=`
   <section class="principal-flow-only-screen">
     <header class="principal-flow-only-header">
-      <button class="principal-flow-only-brand" onclick="renderHome()" aria-label="Voltar para Home"><img src="assets/ilabpharma-logo.svg" alt="iLabPharma"></button>
+      <button class="principal-flow-only-brand" onclick="renderHome()" aria-label="Voltar para Home"><img src="assets/ilabpharma-logo-claro.svg" alt="iLabPharma"></button>
       <div class="principal-flow-only-actions"><button onclick="renderHome()" aria-label="Voltar para Home">⌂</button><button onclick="renderPlaceholder('Acesso')">♙ Entrar</button></div>
     </header>
     <div class="principal-flow-only-layout">

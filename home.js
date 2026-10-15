@@ -26,7 +26,7 @@ function renderHome(){
     <section class="home-screen">
       <header class="home-header">
         <button class="home-brand" onclick="renderHome()" aria-label="Página inicial">
-          <img src="assets/ilabpharma-logo.svg" alt="iLabPharma">
+          <img src="assets/ilabpharma-logo-claro.svg" alt="iLabPharma">
           <span>INTELIGÊNCIA APLICADA</span>
         </button>
       </header>
@@ -48,7 +48,7 @@ function renderHome(){
           <div class="orbit-glow"></div>
           <div class="orbit-ring ring-outer"></div><div class="orbit-ring ring-middle"></div><div class="orbit-ring ring-inner"></div>
           <div class="orbit-cross cross-v"></div><div class="orbit-cross cross-h"></div>
-          <div class="orbit-core"><img src="assets/ilabpharma-logo.svg" alt="iLabPharma"></div>
+          <div class="orbit-core"><img src="assets/ilabpharma-logo-claro.svg" alt="iLabPharma"></div>
           ${modules.map(m=>`<div class="orbit-module ${m.cls}"><div class="module-icon">${icons[m.icon]}</div><b class="module-label">${m.title}</b></div>`).join('')}
         </div>
       </div>
@@ -62,7 +62,7 @@ function renderJourneyIntro(){
   document.querySelectorAll('.nav-item').forEach(x=>x.classList.remove('active'));
   app.innerHTML=`<section class="journey-intro">
     <header class="journey-intro-header">
-      <button class="journey-intro-brand" onclick="renderHome()" aria-label="Voltar para a página inicial"><img src="assets/ilabpharma-logo.svg" alt="iLabPharma"></button>
+      <button class="journey-intro-brand" onclick="renderHome()" aria-label="Voltar para a página inicial"><img src="assets/ilabpharma-logo-claro.svg" alt="iLabPharma"></button>
       <div class="journey-intro-actions">
         <button class="journey-home-btn" onclick="renderHome()" aria-label="Voltar para Home" title="Voltar para Home">⌂</button>
       </div>
@@ -76,7 +76,7 @@ function renderJourneyIntro(){
         <button class="journey-start-btn" onclick="renderJourney(0)"><strong>▶</strong><span>Iniciar jornada</span><b>→</b></button>
       </div>
       <div class="journey-intro-visual" aria-hidden="true">
-        <div class="intro-orbit-glow"></div><div class="intro-ring intro-ring-1"></div><div class="intro-ring intro-ring-2"></div><div class="intro-ring intro-ring-3"></div><div class="intro-cross intro-cross-v"></div><div class="intro-cross intro-cross-h"></div><div class="intro-core"><img src="assets/ilabpharma-logo.svg" alt=""></div>
+        <div class="intro-orbit-glow"></div><div class="intro-ring intro-ring-1"></div><div class="intro-ring intro-ring-2"></div><div class="intro-ring intro-ring-3"></div><div class="intro-cross intro-cross-v"></div><div class="intro-cross intro-cross-h"></div><div class="intro-core"><img src="assets/ilabpharma-logo-claro.svg" alt=""></div>
       </div>
     </main>
   </section>`;

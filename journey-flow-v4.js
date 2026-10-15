@@ -11,7 +11,7 @@
   }
 
   function flowHeader(title,description){
-    return `<header class="principal-flow-v4-header"><button class="principal-flow-v4-brand" onclick="renderHome()" aria-label="Voltar para Home"><img src="assets/ilabpharma-logo.svg" alt="iLabPharma"></button><div class="principal-flow-v4-header-divider"></div><div class="principal-flow-v4-header-title"><strong>${title}</strong><span>${description}</span></div><div class="principal-flow-v4-actions"><button onclick="renderHome()" aria-label="Voltar para Home" title="Voltar para Home">⌂</button></div></header>`;
+    return `<header class="principal-flow-v4-header"><button class="principal-flow-v4-brand" onclick="renderHome()" aria-label="Voltar para Home"><img src="assets/ilabpharma-logo-claro.svg" alt="iLabPharma"></button><div class="principal-flow-v4-header-divider"></div><div class="principal-flow-v4-header-title"><strong>${title}</strong><span>${description}</span></div><div class="principal-flow-v4-actions"><button onclick="renderHome()" aria-label="Voltar para Home" title="Voltar para Home">⌂</button></div></header>`;
   }
 
   function sideBar(){
