@@ -1,0 +1,176 @@
+[
+ {
+  "n": 1,
+  "id": "inicio",
+  "tela": "Início",
+  "texto": "Do insumo ao lote liberado, tudo conectado. O iLabPharma acompanha a produção de medicamentos e vacinas de ponta a ponta, com a Qualidade dentro de cada etapa e as exigências da ANVISA como guia. Vamos percorrer esse caminho em sete etapas."
+ },
+ {
+  "n": 2,
+  "id": "industria",
+  "tela": "Como funciona · 01 Indústria · visão",
+  "texto": "Etapa 1: Indústria. Quem irá fabricar o medicamento? Antes de produzir, a indústria precisa existir. A operação começa pela definição da organização, das pessoas que participam dos processos e dos níveis de acesso necessários para executar e controlar as atividades."
+ },
+ {
+  "n": 3,
+  "id": "industria-fluxos",
+  "tela": "Como funciona · 01 Indústria · fluxos",
+  "texto": "Os fluxos desta etapa: Cadastro, validação e disponibilização e Como os módulos usam os cadastros. Ao final, a indústria estruturada no iLabPharma: pessoas, acessos e cadastros que sustentam todos os outros módulos. Com a indústria estruturada, o primeiro material pode chegar."
+ },
+ {
+  "n": 4,
+  "id": "materiais",
+  "tela": "Como funciona · 02 Materiais e armazenagem · visão",
+  "texto": "Etapa 2: Materiais e armazenagem. Como o material chega, é guardado e chega à produção? Do pedido de compra ao material na mão da produção. O Estoque acompanha cada lote desde a compra e o recebimento, passando pela quarentena e pelo endereçamento, até a entrega à produção, ao cliente ou ao laboratório."
+ },
+ {
+  "n": 5,
+  "id": "materiais-fluxos",
+  "tela": "Como funciona · 02 Materiais e armazenagem · fluxos",
+  "texto": "Os fluxos desta etapa: Compras e avaliação do fornecedor, Recebimento de materiais, Quarentena de materiais e produtos, Reprovado, reanálise e revalidação, Movimentação interna, Almoxarifado do Controle da Qualidade, Inventário, Solicitação e atendimento à produção, Devolução e entradas, Remessa e expedição e Kits. Ao final, cada lote com sua situação, seu endereço e seu histórico, do recebimento à saída. Com o material liberado e guardado, a produção pode pedi-lo e fabricar."
+ },
+ {
+  "n": 6,
+  "id": "fabricacao",
+  "tela": "Como funciona · 03 Medicamento e fabricação · visão",
+  "texto": "Etapa 3: Medicamento e fabricação. Como o medicamento é definido e fabricado? O medicamento deixa de ser especificação e passa a existir. A Produção define o que se fabrica, prepara a área, obtém as autorizações, gera o lote e registra cada etapa. O OPE monta o modelo do registro eletrônico de lote."
+ },
+ {
+  "n": 7,
+  "id": "fabricacao-fluxos",
+  "tela": "Como funciona · 03 Medicamento e fabricação · fluxos",
+  "texto": "Os fluxos desta etapa: Produto, fórmula e ordem de produção, OPE: modelo do registro de lote, Preparação da área, Autorização, início e final, Registro de lote e Terceirização e validade. Ao final, o lote fabricado com o registro completo de cada etapa. Em cada ponto do caminho, o laboratório confirma que o lote está dentro do especificado."
+ },
+ {
+  "n": 8,
+  "id": "cq",
+  "tela": "Como funciona · 04 Controle da Qualidade · visão",
+  "texto": "Etapa 4: Controle da Qualidade. Como o material e o produto são avaliados? Nenhum lote segue sem a análise do laboratório. O Controle da Qualidade recebe a solicitação de análise, orienta a amostragem, registra os resultados e emite o laudo. Cuida também da água, do ambiente e da estabilidade."
+ },
+ {
+  "n": 9,
+  "id": "cq-fluxos",
+  "tela": "Como funciona · 04 Controle da Qualidade · fluxos",
+  "texto": "Os fluxos desta etapa: Regras de amostragem e de análise, Solicitação, análise e laudo, Água e ambiente e Estabilidade. Ao final, laudo emitido e lote com o seu destino definido. Os resultados alimentam a Garantia da Qualidade, que investiga, corrige e previne."
+ },
+ {
+  "n": 10,
+  "id": "gq",
+  "tela": "Como funciona · 05 Garantia da Qualidade · visão",
+  "texto": "Etapa 5: Garantia da Qualidade. Como a qualidade é governada? A qualidade como sistema, não só como análise. A Garantia da Qualidade reúne os processos que investigam, corrigem, previnem e demonstram a conformidade da operação."
+ },
+ {
+  "n": 11,
+  "id": "gq-fluxos",
+  "tela": "Como funciona · 05 Garantia da Qualidade · fluxos",
+  "texto": "Os fluxos desta etapa: Desvios e CAPA, Controle de mudanças, Autoinspeção e auditoria, Treinamento e Assuntos regulatórios. Ao final, cada não conformidade investigada, cada mudança avaliada e cada pessoa treinada, com registro. E tudo isso se apoia em documentos e procedimentos sob controle."
+ },
+ {
+  "n": 12,
+  "id": "documentos",
+  "tela": "Como funciona · 06 Documentos · visão",
+  "texto": "Etapa 6: Documentos. Como os documentos são controlados? Cada procedimento no lugar certo, na versão certa. O Controle de Documentos conduz o documento da elaboração à vigência e à obsolescência, e controla as cópias impressas."
+ },
+ {
+  "n": 13,
+  "id": "documentos-fluxos",
+  "tela": "Como funciona · 06 Documentos · fluxos",
+  "texto": "Os fluxos desta etapa: Tipo de documento, arquivos e modelos, Ciclo do documento, Controle de cópias e Documento externo e anterior ao sistema. Ao final, documentos aprovados e identificados, com histórico do ciclo. Com o lote liberado e documentado, ele segue para o cliente, sem perder a sua história."
+ },
+ {
+  "n": 14,
+  "id": "distribuicao",
+  "tela": "Como funciona · 07 Produto acabado até o cliente · visão",
+  "texto": "Etapa 7: Produto acabado até o cliente. Como o medicamento chega ao cliente e pode ser acompanhado? Depois da fabricação, o lote segue com a sua história. O Comercial conduz a venda do lote disponível até a fatura e a remessa. A Rastreabilidade dá a cada embalagem o seu identificador único (IUM) e registra os eventos declarados ao SNCM."
+ },
+ {
+  "n": 15,
+  "id": "distribuicao-fluxos",
+  "tela": "Como funciona · 07 Produto acabado até o cliente · fluxos",
+  "texto": "Os fluxos desta etapa: Cliente e cadastros de venda, Cotação, requisição e reserva, Fatura, remessa e cancelamento, Geração de IUM e agregação e Eventos e declaração à ANVISA. Ao final, o medicamento entregue e a história de cada embalagem registrada. Agora, como cada exigência da ANVISA é atendida ao longo desse caminho."
+ },
+ {
+  "n": 16,
+  "id": "g0",
+  "tela": "Normas da ANVISA · Sistema computadorizado",
+  "texto": "Dentro das normas da ANVISA. Cada exigência da RDC 658 e do Guia 33 tem um lugar nesse caminho. Sistema computadorizado. A base de tudo: o próprio sistema precisa merecer confiança."
+ },
+ {
+  "n": 17,
+  "id": "g1",
+  "tela": "Normas da ANVISA · Materiais e lotes",
+  "texto": "Materiais e lotes. Do portão ao estoque: nenhum material é usado sem ser liberado."
+ },
+ {
+  "n": 18,
+  "id": "g2",
+  "tela": "Normas da ANVISA · Sistema da qualidade",
+  "texto": "Sistema da qualidade. Como a empresa investiga, corrige e aprende com o que acontece."
+ },
+ {
+  "n": 19,
+  "id": "g3",
+  "tela": "Normas da ANVISA · Laboratório",
+  "texto": "Laboratório. No laboratório, resultados que se podem provar."
+ },
+ {
+  "n": 20,
+  "id": "g4",
+  "tela": "Normas da ANVISA · Fabricação",
+  "texto": "Fabricação. Na fábrica, instruções aprovadas e registros completos."
+ },
+ {
+  "n": 21,
+  "id": "g5",
+  "tela": "Normas da ANVISA · Documentação",
+  "texto": "Documentação. Documentos: a versão certa, no lugar certo."
+ },
+ {
+  "n": 22,
+  "id": "g6",
+  "tela": "Normas da ANVISA · Distribuição e rastreabilidade",
+  "texto": "Distribuição e rastreabilidade. Depois da fabricação: saber para onde foi cada lote."
+ },
+ {
+  "n": 23,
+  "id": "entrega",
+  "tela": "O que entregamos · abertura",
+  "texto": "O que o iLabPharma entrega? Mais do que um sistema."
+ },
+ {
+  "n": 24,
+  "id": "cena1",
+  "tela": "O que entregamos · cena 1",
+  "texto": "Não entregamos um sistema. Entregamos a certeza de cada lote. Do insumo recebido ao medicamento liberado, cada lote chega ao fim com a sua história inteira."
+ },
+ {
+  "n": 25,
+  "id": "cena2",
+  "tela": "O que entregamos · cena 2",
+  "texto": "Entregamos a tranquilidade de abrir a porta para a inspeção. Registros, histórico e documentos no lugar, porque foram feitos no momento em que as coisas aconteceram."
+ },
+ {
+  "n": 26,
+  "id": "cena3",
+  "tela": "O que entregamos · cena 3",
+  "texto": "Entregamos uma só verdade. Nove módulos, uma única língua. O que o laboratório decide, o estoque, a produção e a venda respeitam. Cada informação é registrada uma vez e usada por todos."
+ },
+ {
+  "n": 27,
+  "id": "cena4",
+  "tela": "O que entregamos · cena 4",
+  "texto": "Entregamos a qualidade dentro de cada etapa, não conferida só no final. Desvios, mudanças, treinamentos e auditorias acontecem junto com a operação, e não depois dela."
+ },
+ {
+  "n": 28,
+  "id": "cena5",
+  "tela": "O que entregamos · cena 5",
+  "texto": "Entregamos a confiança de saber para onde foi cada lote. Cada embalagem com o seu identificador único e cada remessa registrada. Se um dia for preciso recolher, a resposta já existe."
+ },
+ {
+  "n": 29,
+  "id": "cena6",
+  "tela": "O que entregamos · cena 6",
+  "texto": "Entregamos orgulho: o de fabricar bem o que vai cuidar de pessoas. Medicamentos e vacinas feitos com processo, prova e a norma da ANVISA como guia."
+ }
+]
